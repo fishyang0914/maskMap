@@ -1,0 +1,8 @@
+@function pxToVw_414($px) {
+    @return $px * 100 / 414 + vw;
+}
+@mixin flex_center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
