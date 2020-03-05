@@ -12,7 +12,7 @@ vue, vuex都有綁上變數$cookie，所以可以這樣用：
 ```javascript
     import osm from 'lib/osm'
     osm.initMap()   // 地圖初始化
-    osm.pinTo(x, y, item)   // 將位置標記在地圖上並popup內容
+    osm.panTo(x, y, item)   // 將位置標記在地圖上並popup內容
     osm.addMapMarker(x, y, item)    // 新增標記
     osm.removeMapMarker()   // 移除所有標記
 ```

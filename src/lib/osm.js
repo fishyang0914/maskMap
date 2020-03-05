@@ -56,7 +56,7 @@ const osm = {
             }
         });
     },
-    pinTo(x, y, item) {
+    panTo(x, y, item) {
         const icon = item.mask_adult || item.mask_child ? icons.green : icons.grey;
         this.map.panTo(new L.LatLng(y, x));
         L.marker([y, x], {

@@ -48,11 +48,11 @@ export default {
                     properties,
                 )
             })
-            this.pinTo(this.pharmacyResultList[0]);
+            this.panTo(this.pharmacyResultList[0]);
         },
-        pinTo(pharmacy) {
+        panTo(pharmacy) {
             const { properties, geometry } = pharmacy;
-            osm.pinTo(geometry.coordinates[0], geometry.coordinates[1], properties);
+            osm.panTo(geometry.coordinates[0], geometry.coordinates[1], properties);
         },
         removeMarker() {
             osm.removeMapMarker();
@@ -94,7 +94,7 @@ export default {
                     'adult': obj.properties.mask_adult,
                     'child': obj.properties.mask_child
                  }"
-                @click="pinTo(obj)">
+                @click="panTo(obj)">
                     <h3>{{ obj.properties.name }}</h3>
                     <p class="mb-0">
                         成人口罩：{{ obj.properties.mask_adult}} | 兒童口罩：{{ obj.properties.mask_child}}
